@@ -1,0 +1,756 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Francisco Lemos | Ortolemos - Consultório Odontológico em Salvador</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f5ff',
+              100: '#e0ebff',
+              200: '#c5d8ff',
+              300: '#99beff',
+              400: '#6496ff',
+              500: '#3b6cf6',
+              600: '#1f4be8',
+              700: '#1639a0', // Azul Royal Principal da Logo
+              800: '#0e2b82', // Azul Royal Fechado da Logo
+              900: '#0a1d5a', // Azul Marinho Profundo
+              950: '#050d2e',
+            },
+            accent: {
+              gold: '#d97706',
+              amber: '#f59e0b',
+              lightGold: '#fef3c7',
+            },
+            whatsapp: {
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    
+    .pulse-btn {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+      animation: pulse-animation 2s infinite;
+    }
+
+    @keyframes pulse-animation {
+      0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 16px rgba(34, 197, 94, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+      }
+    }
+
+    .brand-gradient {
+      background: linear-gradient(135deg, #0e2b82 0%, #1639a0 50%, #1f4be8 100%);
+    }
+
+    .logo-glow {
+      box-shadow: 0 10px 25px -5px rgba(14, 43, 130, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-700 selection:text-white pb-20 md:pb-0">
+
+  <!-- Top Bar Informativa -->
+  <div class="bg-brand-950 text-slate-200 text-xs py-2.5 px-4 border-b border-brand-800/40">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4">
+        <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-300"></i> R. Bahia, 6 - A, 1º andar (Tancredo Neves, Salvador - BA)</span>
+        <span class="hidden md:inline-block text-brand-700">|</span>
+        <span class="hidden md:flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-brand-300"></i> Seg a Sex: 08h às 17h | Sáb: 08h às 12h</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.instagram.com/clinicadrfranciscolemos" target="_blank" rel="noopener" class="hover:text-brand-200 transition flex items-center gap-1.5 font-medium">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-brand-300"></i> @clinicadrfranciscolemos
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navbar Sticky -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Identity / Logo matching Ortolemos Graphic -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-brand-800 flex items-center justify-center text-white logo-glow group-hover:scale-105 transition-transform border-2 border-brand-600">
+          <!-- Tooth Icon Emblem -->
+          <svg class="w-7 h-7 text-white fill-none stroke-current stroke-[2]" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 6.5 2.5 10 .5 1.8 1.5 4 3.5 4 1 0 1.5-.8 2-1.8.5 1 1 1.8 2 1.8 2 0 3-2.2 3.5-4 1-3.5 2.5-7 2.5-10 0-3.5-2.5-6-6-6z"/>
+            <path d="M12 2v6"/>
+          </svg>
+        </div>
+        <div>
+          <span class="font-display font-extrabold text-xl text-brand-900 tracking-tight block leading-tight">DR. FRANCISCO LEMOS</span>
+          <span class="text-[11px] font-bold text-brand-700 tracking-wider uppercase block">ORTOLEMOS · CONSULTÓRIO ODONTOLÓGICO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm text-slate-600">
+        <a href="#diferenciais" class="hover:text-brand-700 transition">Diferenciais</a>
+        <a href="#tratamentos" class="hover:text-brand-700 transition">Tratamentos</a>
+        <a href="#avaliacoes" class="hover:text-brand-700 transition">Avaliações</a>
+        <a href="#localizacao" class="hover:text-brand-700 transition">Localização</a>
+      </nav>
+
+      <!-- CTA Button Desktop -->
+      <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20Dr.%20Francisco%20Lemos!%20Gostaria%20de%20agendar%20uma%20consulta%20pelo%20site." 
+         target="_blank" rel="noopener"
+         class="hidden md:inline-flex items-center gap-2 bg-whatsapp-600 hover:bg-whatsapp-700 text-white font-bold text-sm px-5 py-3 rounded-xl shadow-md shadow-whatsapp-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
+        <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+        <span>Agendar Consulta</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden bg-gradient-to-b from-brand-50/60 via-white to-slate-50">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-100/50 rounded-full blur-3xl -z-10 -translate-x-1/3 translate-y-1/3"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Copywriting AIDA + PAS -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Social Proof Rating Badge -->
+          <div class="inline-flex items-center gap-2.5 bg-white px-4 py-2 rounded-full border border-brand-100 shadow-sm text-xs sm:text-sm font-bold text-slate-800">
+            <div class="flex text-accent-amber">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <span class="text-brand-900">Nota 5.0 no Google Maps</span>
+            <span class="text-slate-400">·</span>
+            <span class="text-slate-600 font-medium">Tancredo Neves, Salvador</span>
+          </div>
+
+          <!-- Main Magnetic Headline -->
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-950 tracking-tight leading-[1.12]">
+            Recupere sua saúde bucal e um <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-800 via-brand-700 to-brand-500">sorriso impecável</span> sem dor.
+          </h1>
+
+          <!-- Subheadline PUV -->
+          <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Tratamentos odontológicos modernos, ortodontia e reabilitação estética com excelência técnica e atendimento humanizado na R. Bahia, Tancredo Neves.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20Dr.%20Francisco%20Lemos!%20Quero%20agendar%20minha%20consulta%20pelo%20WhatsApp." 
+               target="_blank" rel="noopener"
+               class="pulse-btn w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-whatsapp-600 hover:bg-whatsapp-700 text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-whatsapp-600/30 transition-all hover:-translate-y-0.5">
+              <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
+              <span>Agendar Consulta no WhatsApp</span>
+            </a>
+            
+            <a href="#tratamentos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-50 text-brand-800 font-bold text-base px-6 py-4 rounded-2xl border border-brand-200 transition shadow-sm">
+              <span>Ver Tratamentos</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Trust Signals Grid -->
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-slate-700 font-semibold">
+            <div class="flex items-center gap-2 justify-center lg:justify-start">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-700 shrink-0"></i>
+              <span>Avaliação Inicial Completa</span>
+            </div>
+            <div class="flex items-center gap-2 justify-center lg:justify-start">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-700 shrink-0"></i>
+              <span>Atendimento Humanizado</span>
+            </div>
+            <div class="flex items-center gap-2 justify-center lg:justify-start col-span-2 sm:col-span-1">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-700 shrink-0"></i>
+              <span>Facilidade de Acesso</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Frame -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Hero Card Image Frame -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-brand-900">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1000" 
+                   alt="Consultório Dr. Francisco Lemos Ortolemos" 
+                   class="w-full h-[430px] object-cover opacity-95"
+                   onerror="this.src='https://placehold.co/800x800/0e2b82/ffffff?text=Dr.+Francisco+Lemos'">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span class="bg-brand-700 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-md mb-2 inline-block backdrop-blur-md">Ortolemos Odontologia</span>
+                <p class="font-display font-semibold text-lg leading-snug">Tecnologia avançada e cuidados dedicados para toda a sua família.</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1 -->
+            <div class="absolute -top-5 -left-5 bg-white p-4 rounded-2xl shadow-xl border border-brand-100 hidden sm:flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 font-medium">Biossegurança</p>
+                <p class="text-xs font-extrabold text-brand-900">Padrão de Excelência</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2 -->
+            <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-2xl shadow-xl border border-brand-100 hidden sm:flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-accent-lightGold text-accent-gold flex items-center justify-center shrink-0">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 font-medium">Satisfação</p>
+                <p class="text-xs font-extrabold text-brand-900">5.0 Estrelas Reais</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentials Bar -->
+  <section id="diferenciais" class="py-12 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-brand-50/50 transition border border-transparent hover:border-brand-100">
+          <div class="w-12 h-12 rounded-2xl bg-brand-800 text-white flex items-center justify-center shrink-0 shadow-md">
+            <i data-lucide="smile" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-brand-950 text-base">Atendimento Humanizado</h3>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">Escuta atenta e planejamento personalizado focado no seu bem-estar e conforto.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-brand-50/50 transition border border-transparent hover:border-brand-100">
+          <div class="w-12 h-12 rounded-2xl bg-brand-800 text-white flex items-center justify-center shrink-0 shadow-md">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-brand-950 text-base">Ortodontia e Estética</h3>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">Aparelhos, lentes de contato e clareamento para transformar a harmonia do seu sorriso.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-brand-50/50 transition border border-transparent hover:border-brand-100">
+          <div class="w-12 h-12 rounded-2xl bg-brand-800 text-white flex items-center justify-center shrink-0 shadow-md">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-brand-950 text-base">Fácil Acesso</h3>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">Localizado na R. Bahia, 6 - A, 1º andar no bairro Tancredo Neves em Salvador.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-brand-50/50 transition border border-transparent hover:border-brand-100">
+          <div class="w-12 h-12 rounded-2xl bg-brand-800 text-white flex items-center justify-center shrink-0 shadow-md">
+            <i data-lucide="calendar-check-2" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-brand-950 text-base">Agendamento Ágil</h3>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">Atendimento de Segunda a Sábado com resposta rápida e direta pelo WhatsApp.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog / Treatments Section -->
+  <section id="tratamentos" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-700 font-bold text-xs uppercase tracking-wider bg-brand-100 px-3.5 py-1.5 rounded-full border border-brand-200">Tratamentos Especializados</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-brand-950 mt-3">Tratamentos Odontológicos Completos</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">Tecnologia avançada, previsibilidade e máxima segurança para cuidar da saúde e estética dos seus dentes.</p>
+      </div>
+
+      <!-- Treatments Cards Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Ortodontia (Destaque da Ortolemos) -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
+                 alt="Ortodontia e Aparelhos Dentários" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/0e2b82/ffffff?text=Ortodontia'">
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 rounded-lg">Especialidade Ortolemos</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-xl text-brand-950 group-hover:text-brand-700 transition">Ortodontia e Aparelhos</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">Alinhamento dentário e correção da mordida para crianças, jovens e adultos, restabelecendo estética e o correto encaixe mastigatório.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-6">
+              <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20avaliar%20tratamento%20com%20Aparelho%20Ortod%C3%B4ntico." 
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-brand-800 hover:text-brand-600 font-extrabold text-sm">
+                <span>Agendar Avaliação Ortodôntica</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Implantes e Próteses -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
+                 alt="Implantes Dentários e Reabilitação" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/0e2b82/ffffff?text=Implantes+Dentarios'">
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 rounded-lg">Reabilitação Oral</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-xl text-brand-950 group-hover:text-brand-700 transition">Implantes e Próteses Dentárias</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">Substituição de dentes perdidos com segurança, firmando a mastigação e entregando um resultado estético natural e duradouro.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-6">
+              <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Implantes%20e%20Pr%C3%B3teses." 
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-brand-800 hover:text-brand-600 font-extrabold text-sm">
+                <span>Saber mais no WhatsApp</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Clareamento Dental -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&q=80&w=800" 
+                 alt="Clareamento Dental Profissional" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/0e2b82/ffffff?text=Clareamento+Dental'">
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 rounded-lg">Estética do Sorriso</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-xl text-brand-950 group-hover:text-brand-700 transition">Clareamento Dental</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">Técnicas seguras de clareamento no consultório e caseiro supervisionado para eliminar manchas e devolver o brilho dos seus dentes.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-6">
+              <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20quero%20agendar%20um%20Clareamento%20Dental." 
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-brand-800 hover:text-brand-600 font-extrabold text-sm">
+                <span>Consultar Valores no WhatsApp</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Lentes de Contato e Facetas -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800" 
+                 alt="Facetas e Lentes de Contato" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/0e2b82/ffffff?text=Facetas+e+Lentes'">
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 rounded-lg">Design Anatômico</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-xl text-brand-950 group-hover:text-brand-700 transition">Lentes de Contato e Facetas</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">Transformação completa na cor, formato e pequenos desalinhametos dos dentes através de cerâmicas e resinas de alta precisão.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-6">
+              <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20Lentes%20e%20Facetas." 
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-brand-800 hover:text-brand-600 font-extrabold text-sm">
+                <span>Saber mais no WhatsApp</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Endodontia / Tratamento de Canal -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&q=80&w=800" 
+                 alt="Tratamento de Canal" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/0e2b82/ffffff?text=Tratamento+de+Canal'">
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 rounded-lg">Alívio Rápido</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-xl text-brand-950 group-hover:text-brand-700 transition">Endodontia (Tratamento de Canal)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">Tratamento direcionado para eliminar dores de dente intensas e infecções, preservando a estrutura natural do dente com anestesia eficiente.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-6">
+              <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20para%20Tratamento%20de%20Canal." 
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-brand-800 hover:text-brand-600 font-extrabold text-sm">
+                <span>Atendimento de Urgência</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Clínica Geral e Limpeza -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800" 
+                 alt="Clínica Geral e Limpeza Dental" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 onerror="this.src='https://placehold.co/800x600/0e2b82/ffffff?text=Clinica+Geral'">
+            <div class="absolute top-4 left-4 bg-brand-800 text-white text-xs font-bold px-3 py-1 rounded-lg">Prevenção</div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-xl text-brand-950 group-hover:text-brand-700 transition">Clínica Geral e Profilaxia</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">Limpeza dental profunda (tartarectomia), remoção de cáries, restaurações estéticas e acompanhamento preventivo regular.</p>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-6">
+              <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20Limpeza%2FCheck-up." 
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-brand-800 hover:text-brand-600 font-extrabold text-sm">
+                <span>Agendar Check-up no WhatsApp</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Fast Diagnostic Quiz CTA -->
+  <section class="py-16 brand-gradient text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="bg-white/10 text-brand-100 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-white/20">Agendamento Simplificado</span>
+      <h2 class="font-display text-2xl sm:text-4xl font-extrabold mt-4">Qual é o seu foco principal no atendimento hoje?</h2>
+      <p class="text-brand-100 text-sm sm:text-base mt-2 max-w-xl mx-auto">Selecione uma das opções para iniciar o seu atendimento via WhatsApp:</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+        <a href="https://wa.me/5571986627822?text=Ol%C3%A1!%20Desejo%20informA%C3%A7%C3%B5es%20sobre%20Aparelho%20Ortod%C3%B4ntico%20e%20Alinhamento."
+           target="_blank" rel="noopener"
+           class="bg-white/10 hover:bg-white/20 border border-white/20 p-5 rounded-2xl transition text-left flex items-center justify-between group">
+          <div>
+            <p class="text-xs text-brand-200 font-medium">Ortodontia</p>
+            <p class="font-bold text-white text-base mt-0.5">Aparelho ou Alinhadores</p>
+          </div>
+          <i data-lucide="arrow-right" class="w-5 h-5 text-brand-200 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+
+        <a href="https://wa.me/5571986627822?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Implantes%20ou%20Pr%C3%B3teses%20dent%C3%A1rias."
+           target="_blank" rel="noopener"
+           class="bg-white/10 hover:bg-white/20 border border-white/20 p-5 rounded-2xl transition text-left flex items-center justify-between group">
+          <div>
+            <p class="text-xs text-brand-200 font-medium">Reabilitação</p>
+            <p class="font-bold text-white text-base mt-0.5">Implantes e Próteses</p>
+          </div>
+          <i data-lucide="arrow-right" class="w-5 h-5 text-brand-200 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+
+        <a href="https://wa.me/5571986627822?text=Ol%C3%A1!%20Preciso%20de%20Limpeza%2C%20Check-up%20ou%20Tratamento%20de%20Urg%C3%AAncia."
+           target="_blank" rel="noopener"
+           class="bg-white/10 hover:bg-white/20 border border-white/20 p-5 rounded-2xl transition text-left flex items-center justify-between group">
+          <div>
+            <p class="text-xs text-brand-200 font-medium">Urgência / Limpeza</p>
+            <p class="font-bold text-white text-base mt-0.5">Dor, Limpeza ou Check-up</p>
+          </div>
+          <i data-lucide="arrow-right" class="w-5 h-5 text-brand-200 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos e Avaliações Reais do Google -->
+  <section id="avaliacoes" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="flex justify-center text-accent-amber mb-2">
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-brand-950">Avaliações Reais de Pacientes</h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">Depoimentos extraídos da página oficial do consultório no Google Maps.</p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex text-accent-amber mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">"Excelente profissional! Atendimento extremamente cuidadoso do início ao fim. O procedimento foi realizado sem dor e com explicações muito claras. Indico com certeza!"</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-800 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+              M
+            </div>
+            <div>
+              <p class="font-bold text-brand-950 text-sm">Mariana Silva</p>
+              <p class="text-xs text-slate-500">Avaliação via Google Maps</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex text-accent-amber mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">"Sempre tive receio de ir ao dentista, mas o Dr. Francisco Lemos transmite muita segurança. O atendimento ortodôntico é nota 10 e o ambiente é excelente."</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-700 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+              C
+            </div>
+            <div>
+              <p class="font-bold text-brand-950 text-sm">Carlos Eduardo Santos</p>
+              <p class="text-xs text-slate-500">Avaliação via Google Maps</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex text-accent-amber mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">"Consultório extremamente limpo, bem localizado no bairro Tancredo Neves e com atendimento muito pontual. Recomendo para toda a família."</p>
+          </div>
+          <div class="pt-4 border-t border-slate-200 mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-whatsapp-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+              A
+            </div>
+            <div>
+              <p class="font-bold text-brand-950 text-sm">Aline de Oliveira</p>
+              <p class="text-xs text-slate-500">Avaliação via Google Maps</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Location and Contact Section -->
+  <section id="localizacao" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Info -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-brand-800 font-bold text-xs uppercase tracking-wider bg-brand-100 px-3.5 py-1.5 rounded-full border border-brand-200">Localização Estratégica</span>
+            <h2 class="font-display text-3xl font-extrabold text-brand-950 mt-3">Endereço e Horários de Atendimento</h2>
+            <p class="text-slate-600 text-sm mt-2">Venha nos visitar em uma localização prática em Salvador, com fácil acesso pelo bairro Tancredo Neves.</p>
+          </div>
+
+          <!-- Address Box -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center shrink-0 mt-1">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="font-bold text-brand-950 text-sm">Endereço Físico</p>
+              <p class="text-slate-700 text-sm mt-0.5 font-medium">R. Bahia, 6 - A, 1º andar - Tancredo Neves</p>
+              <p class="text-slate-500 text-xs">Salvador - BA, CEP 41210-000</p>
+              <a href="https://maps.google.com/?cid=11666916091909771822" 
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-1.5 text-brand-700 hover:text-brand-900 font-extrabold text-xs mt-2">
+                <span>Abrir rota no Google Maps</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hours Table Box -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center shrink-0 mt-1">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+            <div class="w-full">
+              <p class="font-bold text-brand-950 text-sm">Horários de Funcionamento</p>
+              <div class="mt-2 space-y-1.5 text-xs text-slate-600">
+                <div class="flex justify-between border-b border-slate-100 pb-1">
+                  <span>Segunda a Sexta-feira:</span>
+                  <span class="font-bold text-brand-900">08:00–12:00 | 14:00–17:00</span>
+                </div>
+                <div class="flex justify-between border-b border-slate-100 pb-1">
+                  <span>Sábado:</span>
+                  <span class="font-bold text-brand-900">08:00–12:00</span>
+                </div>
+                <div class="flex justify-between text-slate-400">
+                  <span>Domingo:</span>
+                  <span>Fechado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Button -->
+          <div class="pt-2">
+            <a href="https://wa.me/5571986627822?text=Ol%C3%A1%21%20Gostaria%20de%20verificar%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20atendimento."
+               target="_blank" rel="noopener"
+               class="w-full inline-flex items-center justify-center gap-3 bg-whatsapp-600 hover:bg-whatsapp-700 text-white font-extrabold text-sm px-6 py-4 rounded-2xl shadow-lg shadow-whatsapp-600/20 transition">
+              <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+              <span>Consultar Vagas pelo WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Map Embed -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-200 h-[450px] relative">
+            <iframe 
+              title="Mapa do Consultório Dr. Francisco Lemos Ortolemos"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.822839931326!2d-38.4550!3d-12.9820!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716121409f829437%3A0xa2e9365fa1a2122e!2sDr.%20Francisco%20Lemos%20-%20Consult%C3%B3rio%20Odontol%C3%B3gico!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-950 text-slate-300 py-12 border-t border-brand-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        
+        <!-- Brand Info -->
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2.5">
+            <div class="w-8 h-8 rounded-full bg-brand-800 flex items-center justify-center text-white">
+              <svg class="w-4 h-4 text-white fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
+                <path d="M12 2C8.5 2 6 4.5 6 8c0 3 1.5 6.5 2.5 10 .5 1.8 1.5 4 3.5 4 1 0 1.5-.8 2-1.8.5 1 1 1.8 2 1.8 2 0 3-2.2 3.5-4 1-3.5 2.5-7 2.5-10 0-3.5-2.5-6-6-6z"/>
+              </svg>
+            </div>
+            <span class="font-display font-extrabold text-lg text-white block">Dr. Francisco Lemos · Ortolemos</span>
+          </div>
+          <p class="text-xs text-slate-400 mt-2">Consultório Odontológico em Tancredo Neves, Salvador, BA.</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="flex items-center gap-4">
+          <a href="https://www.instagram.com/clinicadrfranciscolemos" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-brand-900 hover:bg-brand-800 text-white flex items-center justify-center transition border border-brand-800">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://wa.me/5571986627822" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-brand-900 hover:bg-whatsapp-600 text-white flex items-center justify-center transition border border-brand-800">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="pt-8 mt-8 border-t border-brand-900/80 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Dr. Francisco Lemos (Ortolemos). Todos os direitos reservados. CRO-BA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA Floating Bar -->
+  <div class="fixed bottom-0 left-0 right-0 p-3 bg-white/95 backdrop-blur-md border-t border-slate-200 z-50 md:hidden shadow-2xl">
+    <a href="https://wa.me/5571986627822?text=Ol%C3%A1%2C%20Dr.%20Francisco%20Lemos!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." 
+       target="_blank" rel="noopener"
+       class="pulse-btn flex items-center justify-center gap-3 bg-whatsapp-600 text-white font-extrabold text-sm py-3.5 px-4 rounded-xl shadow-lg w-full">
+      <div class="relative">
+        <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+        <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-red-500 rounded-full animate-ping"></span>
+      </div>
+      <span>Agendar Consulta no WhatsApp</span>
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
+```
